@@ -4,17 +4,16 @@ const refs = {
   highBtnClick: document.querySelector(`[data-action="increment"`),
   countBtnClick: document.querySelector("#value"),
 };
-// console.log(refs.countBtnClick);
 
-refs.lowBtnClick.addEventListener("click", OnClickLowBtn);
-refs.highBtnClick.addEventListener("click", OnClickHighBtn);
+refs.lowBtnClick.addEventListener("click", onClickLowBtn);
+refs.highBtnClick.addEventListener("click", onClickHighBtn);
 
-function OnClickLowBtn(event) {
+function onClickLowBtn(event) {
   counterValue -= 1;
   refs.countBtnClick.textContent = counterValue;
 }
 
-function OnClickHighBtn(event) {
+function onClickHighBtn(event) {
   counterValue += 1;
   refs.countBtnClick.textContent = counterValue;
 }

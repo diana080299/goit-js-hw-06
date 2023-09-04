@@ -5,13 +5,16 @@ inputChange.addEventListener("blur", changeValidColor);
 function changeValidColor(event) {
   const inputLength = Number(inputChange.dataset.length);
 
-  const inputValue = Number(inputChange.value.length);
+  const inputValue = inputChange.value.length;
 
   if (inputValue === inputLength) {
-    inputChange.classList.add("valid");
-    inputChange.classList.remove("invalid");
+    handleInput("valid", "invalid");
   } else {
-    inputChange.classList.remove("valid");
-    inputChange.classList.add("invalid");
+    handleInput("invalid", "valid");
   }
+}
+
+function handleInput(a, b) {
+  inputChange.classList.add(a);
+  inputChange.classList.remove(b);
 }

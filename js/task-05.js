@@ -1,10 +1,10 @@
 const input = document.querySelector("#name-input");
 const spanText = document.querySelector("#name-output");
 
-input.addEventListener("input", OnClickInput);
+input.addEventListener("input", onClickInput);
 
-function OnClickInput(event) {
-  if (input !== "") {
+function onClickInput(event) {
+  if (input.value.trim() !== "") {
     spanText.textContent = event.currentTarget.value;
   } else {
     spanText.textContent = "Anonymous";
